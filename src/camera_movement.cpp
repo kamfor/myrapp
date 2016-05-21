@@ -6,11 +6,22 @@ int camera_movement() {
     joint_names.clear();
     std::vector<float> joint_angles;
     joint_angles.clear();
-    joint_names.push_back("head_pitch");
-    joint_angles.push_back(-1); // turn head in pitch to -1 rad orientation
-    joint_names.push_back("head_yaw");
-    joint_angles.push_back(1.57); // turn head in yaw to 1.57 rad orientation
 
-    nav.moveJoint(joint_names, joint_angles);
+    joint_names.push_back("head_pitch");
+    joint_angles.push_back(-0.3); // turn head in pitch to -1 rad orientation
+    joint_names.push_back("head_yaw");
+    joint_angles.push_back(1); // turn head in yaw to 1.57 rad orientation
+
+    joint_names.push_back("head_pitch");
+    joint_angles.push_back(0.3); // turn head in pitch to -1 rad orientation
+    joint_names.push_back("head_yaw");
+    joint_angles.push_back(-1); // turn head in yaw to 1.57 rad orientation
+
+    nav.moveVel(1, 0.1);
+    for(int i = 0; i<10; ++i) {
+        nav.moveJoint(joint_names, joint_angles);
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+    }
+    nav.moveStop();
     return 0;
 }
