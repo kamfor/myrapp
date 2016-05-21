@@ -21,7 +21,6 @@ int main(int argc, char * argv[]) {
     */
     rapp::robot::navigation nav;
     bool status;
-    status = nav.moveVel(1, 0);
     status = nav.moveTo(0, 0, 0);
     status = nav.moveTo(0, 0, 5);
     status = nav.moveVel(2, 0);
