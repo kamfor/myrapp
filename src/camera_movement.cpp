@@ -50,5 +50,6 @@ int camera_movement(int argc, char * argv[]) {
         //std::this_thread::sleep_for(std::chrono::seconds(2));
     }
     nav.moveStop();
+    comm.text_to_speech("         W imie zasad       skurwysynu         ");
     return 0;
 }
