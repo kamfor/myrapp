@@ -12,6 +12,6 @@ setup_rapp()
 
 create_rapp(
     NAME myrapp
-    SRCS main.cpp src/talk_to_me.cpp
+    SRCS main.cpp, src/talk_to_me.cpp
     FILES example_qr_map.xml
 )
