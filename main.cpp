@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <chrono>
+#include <thread>
 
 #include <rapp-robots-api/info/info.hpp>
 #include <rapp-robots-api/localization/localization.hpp>
@@ -25,7 +27,8 @@ int main(int argc, char * argv[]) {
     status = nav.moveTo(0, 0, 0);
     status = nav.moveTo(0, 0, 5);
     status = nav.moveVel(2, 0);
-
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+    nav.moveStop();
 
     return 0;
 }
