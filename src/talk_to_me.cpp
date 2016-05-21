@@ -6,6 +6,10 @@ int talk_to_me(int argc, char * argv[]) {
 
     comm.text_to_speech("I will kill you");
 
+    comm.text_to_speech("I will kill you");
+
+    comm.text_to_speech("I will kill you");
+
     /* create list of words for recognition
     std::vector<std::string> words;
     // add two words
