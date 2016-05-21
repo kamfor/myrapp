@@ -23,7 +23,9 @@ int main(int argc, char * argv[]) {
     bool status;
     status = nav.moveVel(1, 0);
     status = nav.moveTo(0, 0, 0);
-    status = nav.moveTo(0, 0, 1);
+    status = nav.moveTo(0, 0, 5);
+    status = nav.moveVel(2, 0);
+    status = nav.lookAtPoint(1,1,1);
 
     return 0;
 }
