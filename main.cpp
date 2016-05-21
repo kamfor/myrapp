@@ -9,7 +9,7 @@
 
 
 int main(int argc, char * argv[]) {
-    //talk_to_me(argc, argv);
+    talk_to_me(argc, argv);
     /*
     rapp::robot::info info(argc, argv);
     rapp::robot::localization loc;
@@ -25,6 +25,7 @@ int main(int argc, char * argv[]) {
     status = nav.moveTo(0, 0, 0);
     status = nav.moveTo(0, 0, 5);
     status = nav.moveVel(2, 0);
+    status = nav.moveStop();
 
 
     return 0;

@@ -14,7 +14,7 @@ int talk_to_me(int argc, char * argv[]) {
     std::string result;
 
 
-    // start word spotting until proper word will be recognized
+    /* start word spotting until proper word will be recognized
     do {
         result = comm.word_spotting(words);
 
@@ -80,6 +80,7 @@ int talk_to_me(int argc, char * argv[]) {
     std::string text = "I know the answer! ";
     text += "You thought about " + std::to_string(lower);
     comm.text_to_speech(text);
+    */
 
 
     comm.play_audio(info.get_path("share/talk_to_me/cheer.wav"));
