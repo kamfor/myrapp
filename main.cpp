@@ -7,7 +7,6 @@
 #include <rapp-robots-api/info/info.hpp>
 #include <rapp-robots-api/localization/localization.hpp>
 #include <rapp-robots-api/navigation/navigation.hpp>
-#include "include/talk_to_me.hpp"
 #include "include/camera_movement.hpp"
 
 

@@ -36,13 +36,16 @@ int camera_movement() {
     joint_names2.push_back("head_yaw");
     joint_angles2.push_back(1.2); // turn head in yaw to 1.57 rad orientation
 
+    comm.text_to_speech("         I will kill you         ");
+
     nav.moveVel(1, 8);
     for(int i = 0; i<5; ++i) {
-        //nav.lookAtPoint(0,0,0);
         nav.moveJoint(joint_names, joint_angles);
-        std::this_thread::sleep_for(std::chrono::seconds(2));
+        comm.text_to_speech("tutututututututututututututu");
+        //std::this_thread::sleep_for(std::chrono::seconds(2));
         nav.moveJoint(joint_names2, joint_angles2);
-        std::this_thread::sleep_for(std::chrono::seconds(2));
+        comm.text_to_speech("tutututututututututututututu");
+        //std::this_thread::sleep_for(std::chrono::seconds(2));
     }
     nav.moveStop();
     return 0;
