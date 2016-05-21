@@ -24,12 +24,12 @@ int main(int argc, char * argv[]) {
 
     rapp::robot::navigation nav;
     bool status;
-    status = nav.lookAtPoint(10,0,0);
-    status = nav.lookAtPoint(-10,0,0);
-    status = nav.lookAtPoint(0,10,0);
-    status = nav.lookAtPoint(0,-10,0);
-    status = nav.lookAtPoint(0,0,10);
-    status = nav.lookAtPoint(0,0,-10);
+    status = nav.lookAtPoint(1,0,0);
+    status = nav.lookAtPoint(-1,0,0);
+    status = nav.lookAtPoint(0,1,0);
+    status = nav.lookAtPoint(0,-1,0);
+    status = nav.lookAtPoint(0,0,1);
+    status = nav.lookAtPoint(0,0,-1);
     status = nav.lookAtPoint(0,0,0);
 
     /*
