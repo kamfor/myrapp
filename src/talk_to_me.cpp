@@ -4,9 +4,9 @@ int talk_to_me(int argc, char * argv[]) {
     rapp::robot::info info(argc, argv);
     rapp::robot::communication comm(argc, argv);
 
-    comm.text_to_speech("Think of a number between 1 and 100. When ready, please say the word start.");
+    comm.text_to_speech("I will kill you");
 
-    // create list of words for recognition
+    /* create list of words for recognition
     std::vector<std::string> words;
     // add two words
     words.push_back("start");
@@ -14,7 +14,7 @@ int talk_to_me(int argc, char * argv[]) {
     std::string result;
 
 
-    /* start word spotting until proper word will be recognized
+    // start word spotting until proper word will be recognized
     do {
         result = comm.word_spotting(words);
 
