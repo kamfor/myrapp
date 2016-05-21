@@ -4,6 +4,7 @@
 
 #include <rapp-robots-api/info/info.hpp>
 #include <rapp-robots-api/localization/localization.hpp>
+#include <rapp-robots-api/localization/navigation.hpp>
 #include "include/talk_to_me.hpp"
 
 
@@ -18,5 +19,8 @@ int main(int argc, char * argv[]) {
     std::cout<<qr_map.labels.at(0)<<std::endl;
     std::cout<<qr_map.labels.at(3)<<std::endl;
     */
+    rapp::robot::navigation nav;
+    bool status;
+    status = nav.moveTo(1, 0, 0);
     return 0;
 }
