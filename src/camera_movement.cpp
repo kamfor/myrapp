@@ -50,10 +50,18 @@ int camera_movement(int argc, char * argv[]) {
         //std::this_thread::sleep_for(std::chrono::seconds(2));
     }
     nav.moveStop();
-    comm.text_to_speech("        HAHA! Nothing to do there! HAHA!        ");
+    comm.text_to_speech("        Nothing to do there!       ");
+    comm.text_to_speech("        Good bye!       ");
 
     nav.moveVel(2, 0);
-    std::this_thread::sleep_for(std::chrono::seconds(3));
+    for(int i = 0; i<1; ++i) {
+        nav.moveJoint(joint_names, joint_angles);
+        comm.text_to_speech("tutututututututututututututu");
+        //std::this_thread::sleep_for(std::chrono::seconds(2));
+        nav.moveJoint(joint_names2, joint_angles2);
+        comm.text_to_speech("tutututututututututututututu");
+        //std::this_thread::sleep_for(std::chrono::seconds(2));
+    }
     nav.moveStop();
     return 0;
 }
