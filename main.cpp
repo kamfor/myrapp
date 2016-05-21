@@ -9,7 +9,7 @@
 
 
 int main(int argc, char * argv[]) {
-    talk_to_me(argc, argv);
+    //talk_to_me(argc, argv);
     /*
     rapp::robot::info info(argc, argv);
     rapp::robot::localization loc;
