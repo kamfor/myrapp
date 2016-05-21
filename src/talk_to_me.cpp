@@ -83,9 +83,6 @@ int talk_to_me(int argc, char * argv[]) {
     */
 
 
-    comm.play_audio(info.get_path("share/talk_to_me/cheer.wav"));
-
-
 
     return 0;
 }
