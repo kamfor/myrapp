@@ -1,24 +1,21 @@
 #include <iostream>
 #include <fstream>
+#include <thread>
+#include <chrono>
 #include <string>
 
 #include <rapp-robots-api/info/info.hpp>
 #include <rapp-robots-api/localization/localization.hpp>
 #include <rapp-robots-api/navigation/navigation.hpp>
 #include "include/talk_to_me.hpp"
+#include "include/camera_movement.hpp"
 
 
 int main(int argc, char * argv[]) {
+    camera_movement();
+    std::this_thread::sleep_for(std::chrono::seconds(2));
     talk_to_me(argc, argv);
-    /*
-    rapp::robot::info info(argc, argv);
-    rapp::robot::localization loc;
-    rapp::object::qr_code_map qr_map;
-    std::ifstream ifstr(info.get_path("share/myrapp/example_qr_map.xml"));
-    qr_map = loc.load_qr_code_map(ifstr);
-    std::cout<<qr_map.labels.at(0)<<std::endl;
-    std::cout<<qr_map.labels.at(3)<<std::endl;
-    */
+
     rapp::robot::navigation nav;
     bool status;
     status = nav.lookAtPoint(10,1,1);
@@ -27,10 +24,6 @@ int main(int argc, char * argv[]) {
     status = nav.moveTo(0, 1, 5);
     status = nav.lookAtPoint(10,0,2);
     status = nav.moveTo(1, 1, 5);
-
-
-
-
 
 
     return 0;
