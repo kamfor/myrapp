@@ -4,9 +4,12 @@
 
 #include <rapp-robots-api/info/info.hpp>
 #include <rapp-robots-api/localization/localization.hpp>
+#include "include/talk_to_me.hpp"
 
 
 int main(int argc, char * argv[]) {
+    talk_to_me(argc, argv);
+    /*
     rapp::robot::info info(argc, argv);
     rapp::robot::localization loc;
     rapp::object::qr_code_map qr_map;
@@ -14,5 +17,6 @@ int main(int argc, char * argv[]) {
     qr_map = loc.load_qr_code_map(ifstr);
     std::cout<<qr_map.labels.at(0)<<std::endl;
     std::cout<<qr_map.labels.at(3)<<std::endl;
+    */
     return 0;
 }
