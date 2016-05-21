@@ -1,6 +1,8 @@
 #include "../include/camera_movement.hpp"
 
 int camera_movement() {
+    rapp::robot::navigation nav;
+
     std::vector<std::string> joint_names3;
     joint_names3.clear();
     std::vector<float> joint_angles3;
@@ -14,7 +16,6 @@ int camera_movement() {
     std::this_thread::sleep_for(std::chrono::seconds(2));
 
 
-    rapp::robot::navigation nav;
     std::vector<std::string> joint_names;
     joint_names.clear();
     std::vector<float> joint_angles;
