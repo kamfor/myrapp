@@ -11,11 +11,8 @@
 
 
 int main(int argc, char * argv[]) {
-    talk_to_me(argc, argv);
-    camera_movement();
-    std::this_thread::sleep_for(std::chrono::seconds(2));
-
-
+    //talk_to_me(argc, argv);
+    camera_movement(argc, argv);
 
     return 0;
 }

@@ -1,6 +1,8 @@
 #include "../include/camera_movement.hpp"
 
-int camera_movement() {
+int camera_movement(int argc, char * argv[]) {
+    rapp::robot::info info(argc, argv);
+    rapp::robot::communication comm(argc, argv);
     rapp::robot::navigation nav;
 /*
     std::vector<std::string> joint_names3;
