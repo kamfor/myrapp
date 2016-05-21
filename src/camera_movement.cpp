@@ -19,7 +19,7 @@ int camera_movement() {
 
     //nav.moveVel(1, 8);
     for(int i = 0; i<10; ++i) {
-        nav.lookAt(0,0,0);
+        nav.lookAtPoint(0,0,0);
         //nav.moveJoint(joint_names, joint_angles);
         std::this_thread::sleep_for(std::chrono::seconds(2));
     }
