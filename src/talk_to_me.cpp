@@ -13,7 +13,8 @@ int talk_to_me(int argc, char * argv[]) {
     words.push_back("stop");
     std::string result;
 
-
+    comm.text_to_speech("I hope we will play again soon!");
+    /*
     // start word spotting until proper word will be recognized
     do {
         result = comm.word_spotting(words);
@@ -29,7 +30,7 @@ int talk_to_me(int argc, char * argv[]) {
             comm.text_to_speech("Say start when ready or stop if you want to finish game.");
         }
     } while (result != "start");
-
+*/
 
     // create variables for lower and upper limit
     int lower = 1;
