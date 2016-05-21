@@ -21,11 +21,16 @@ int main(int argc, char * argv[]) {
     */
     rapp::robot::navigation nav;
     bool status;
-    status = nav.lookAtPoint(1,1,1);
-    status = nav.moveTo(0, 0, 0);
-    status = nav.moveTo(0, 0, 5);
-    status = nav.moveVel(2, 0);
-    status = nav.moveStop();
+    status = nav.lookAtPoint(10,1,1);
+    status = nav.moveTo(1, 0, 0);
+    status = nav.lookAtPoint(10,2,0);
+    status = nav.moveTo(0, 1, 5);
+    status = nav.lookAtPoint(10,0,2);
+    status = nav.moveTo(1, 1, 5);
+
+
+
+
 
 
     return 0;
