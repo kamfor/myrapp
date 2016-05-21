@@ -41,7 +41,7 @@ int camera_movement(int argc, char * argv[]) {
     comm.text_to_speech("         I will kill you         ");
 
     nav.moveVel(1, 8);
-    for(int i = 0; i<2; ++i) {
+    for(int i = 0; i<1; ++i) {
         nav.moveJoint(joint_names, joint_angles);
         comm.text_to_speech("tutututututututututututututu");
         //std::this_thread::sleep_for(std::chrono::seconds(2));
@@ -50,6 +50,10 @@ int camera_movement(int argc, char * argv[]) {
         //std::this_thread::sleep_for(std::chrono::seconds(2));
     }
     nav.moveStop();
-    comm.text_to_speech("         Fuck you         ");
+    comm.text_to_speech("        HAHA! Nothing to do there! HAHA!        ");
+
+    nav.moveVel(2, 0);
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+    nav.moveStop();
     return 0;
 }
