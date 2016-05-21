@@ -1,6 +1,19 @@
 #include "../include/camera_movement.hpp"
 
 int camera_movement() {
+    std::vector<std::string> joint_names3;
+    joint_names3.clear();
+    std::vector<float> joint_angles3;
+    joint_angles3.clear();
+
+    joint_names3.push_back("head_pitch");
+    joint_angles3.push_back(0); // turn head in pitch to -1 rad orientation
+    joint_names3.push_back("head_yaw");
+    joint_angles3.push_back(0.5); // turn head in yaw to 1.57 rad orientation
+    nav.moveJoint(joint_names3, joint_angles3);
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+
     rapp::robot::navigation nav;
     std::vector<std::string> joint_names;
     joint_names.clear();
@@ -22,7 +35,7 @@ int camera_movement() {
     joint_names2.push_back("head_yaw");
     joint_angles2.push_back(-0.3); // turn head in yaw to 1.57 rad orientation
 
-    //nav.moveVel(1, 8);
+    nav.moveVel(1, 8);
     for(int i = 0; i<5; ++i) {
         //nav.lookAtPoint(0,0,0);
         nav.moveJoint(joint_names, joint_angles);
@@ -30,6 +43,6 @@ int camera_movement() {
         nav.moveJoint(joint_names2, joint_angles2);
         std::this_thread::sleep_for(std::chrono::seconds(2));
     }
-    //nav.moveStop();
+    nav.moveStop();
     return 0;
 }
