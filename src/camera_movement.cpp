@@ -4,19 +4,6 @@ int camera_movement(int argc, char * argv[]) {
     rapp::robot::info info(argc, argv);
     rapp::robot::communication comm(argc, argv);
     rapp::robot::navigation nav;
-/*
-    std::vector<std::string> joint_names3;
-    joint_names3.clear();
-    std::vector<float> joint_angles3;
-    joint_angles3.clear();
-
-    joint_names3.push_back("head_pitch");
-    joint_angles3.push_back(0); // turn head in pitch to -1 rad orientation
-    joint_names3.push_back("head_yaw");
-    joint_angles3.push_back(0.5); // turn head in yaw to 1.57 rad orientation
-    nav.moveJoint(joint_names3, joint_angles3);
-    std::this_thread::sleep_for(std::chrono::seconds(2));
-*/
 
     std::vector<std::string> joint_names;
     joint_names.clear();
