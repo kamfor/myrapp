@@ -11,7 +11,7 @@
 
 
 int main(int argc, char * argv[]) {
-    talk_to_me(argc, argv);
+    //talk_to_me(argc, argv);
     /*
     rapp::robot::info info(argc, argv);
     rapp::robot::localization loc;
@@ -21,7 +21,7 @@ int main(int argc, char * argv[]) {
     std::cout<<qr_map.labels.at(0)<<std::endl;
     std::cout<<qr_map.labels.at(3)<<std::endl;
     */
-    /*
+
     rapp::robot::navigation nav;
     bool status;
     status = nav.lookAtPoint(10,0,0);
