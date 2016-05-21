@@ -5,4 +5,4 @@
 #include <unistd.h>
 #include "talk_to_me.hpp"
 
-int camera_movement();
+int camera_movement(int argc, char * argv[]);
