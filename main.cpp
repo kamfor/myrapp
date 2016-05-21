@@ -24,6 +24,7 @@ int main(int argc, char * argv[]) {
 
     rapp::robot::navigation nav;
     bool status;
+    nav.moveStop();
     status = nav.lookAtPoint(1,0,0);
     status = nav.lookAtPoint(-1,0,0);
     status = nav.lookAtPoint(0,1,0);
