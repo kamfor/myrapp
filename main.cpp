@@ -23,12 +23,20 @@ int main(int argc, char * argv[]) {
     */
     rapp::robot::navigation nav;
     bool status;
-    status = nav.lookAtPoint(1,1,1);
+    status = nav.lookAtPoint(10,0,0);
+    status = nav.lookAtPoint(-10,0,0);
+    status = nav.lookAtPoint(0,10,0);
+    status = nav.lookAtPoint(0,-10,0);
+    status = nav.lookAtPoint(0,0,10);
+    status = nav.lookAtPoint(0,0,-10);
+    status = nav.lookAtPoint(0,0,0);
+
+    /*
     status = nav.moveTo(0, 0, 0);
     status = nav.moveTo(0, 0, 5);
     status = nav.moveVel(2, 0);
     std::this_thread::sleep_for(std::chrono::seconds(3));
     nav.moveStop();
-
+*/
     return 0;
 }
