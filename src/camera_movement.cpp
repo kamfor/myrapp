@@ -22,7 +22,7 @@ int camera_movement() {
     joint_names2.push_back("head_yaw");
     joint_angles2.push_back(-1); // turn head in yaw to 1.57 rad orientation
 
-    nav.moveVel(1, 8);
+    //nav.moveVel(1, 8);
     for(int i = 0; i<4; ++i) {
         //nav.lookAtPoint(0,0,0);
         nav.moveJoint(joint_names, joint_angles);
@@ -30,6 +30,6 @@ int camera_movement() {
         nav.moveJoint(joint_names2, joint_angles2);
         std::this_thread::sleep_for(std::chrono::seconds(5));
     }
-    nav.moveStop();
+    //nav.moveStop();
     return 0;
 }
